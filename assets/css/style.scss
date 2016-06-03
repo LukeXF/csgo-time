@@ -4,8 +4,8 @@
 */
 /* General Site Styling */
 html, body {
-    background: #222;
-    background: url("../img/bg.png");
+    background: #1f1f21;
+    // background: url("../img/bg.png");
     background-size: 20%;
     min-width: 300px;
 }
@@ -30,13 +30,27 @@ h1, h2, h3, h4, h5 {
     -webkit-transition: all .25s ease-in-out;
 }
 
+#show-chat {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #19191E;
+    color: white;
+    border: 1px solid white;
+    display: none;
+    opacity: 0.15;
+    @extend .animate;
+
+    &:hover {
+        opacity: 1
+    }
+}
 
 
 
-
-
-/* Navbar styling */
-
+//
+// NAVBAR STYLING
+//
 .navbar {
     background-color: #19191E !important;
     border: none;
@@ -108,19 +122,28 @@ h1, h2, h3, h4, h5 {
     }
 
     .navbar-brand {
+        font-family: "proxima-nova", sans-serif;
         float: left;
         height: 50px;
         padding: 18px 18px;
         font-size: 18px;
         line-height: 20px;
         font-weight: 100;
-        color: white !important;
-        font-family: "proxima-nova", sans-serif;
-    }
+        color: #999 !important;
 
-    .navbar-brand img {
-        width: 27px;
-        display: inline-block;
+        img {
+            width: 27px;
+            display: inline-block;
+            margin-top: -5px;
+        }
+
+
+        #logo {
+            display: none;
+        }
+        #menu-toggle {
+            cursor: pointer;
+        }
     }
 
     .navbar-toggle {
@@ -129,19 +152,34 @@ h1, h2, h3, h4, h5 {
 }
 
 
-
+//
+// PAGE WRAPPING
+//
 #wrapper {
     padding-left: 0;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-}
 
-#wrapper.toggled {
-    padding-left: 250px;
-}
+    #inner-content {
+        width: 100%;
+        position: absolute;
+        padding: 15px;
+    }
 
+    &.toggled {
+        padding-left: 250px;
+        #sidebar-wrapper {
+            width: 250px;
+        }
+        #inner-content {
+            position: absolute;
+            margin-right: -250px;
+        }
+
+    }
+}
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;
@@ -157,23 +195,12 @@ h1, h2, h3, h4, h5 {
     transition: all 0.5s ease;
 }
 
-#wrapper.toggled #sidebar-wrapper {
-    width: 250px;
-}
 
-#page-content-wrapper {
-    width: 100%;
-    position: absolute;
-    padding: 15px;
-}
 
-#wrapper.toggled #page-content-wrapper {
-    position: absolute;
-    margin-right: -250px;
-}
 
-/* Sidebar Styles */
-
+//
+// CHAT PANEL
+//
 .sidebar-nav {
     position: absolute;
     top: 0;
@@ -244,27 +271,28 @@ h1, h2, h3, h4, h5 {
 @media(min-width:768px) {
     #wrapper {
         padding-left: 250px;
-    }
 
-    #wrapper.toggled {
-        padding-left: 0;
+        &.toggled {
+            padding-left: 0;
+            #sidebar-wrapper {
+                width: 0;
+            }
+            #inner-content {
+                position: relative;
+                margin-right: 0;
+            }
+        }
+
+
+        #inner-content {
+            padding: 20px;
+            position: relative;
+        }
+
     }
 
     #sidebar-wrapper {
         width: 250px;
     }
 
-    #wrapper.toggled #sidebar-wrapper {
-        width: 0;
-    }
-
-    #page-content-wrapper {
-        padding: 20px;
-        position: relative;
-    }
-
-    #wrapper.toggled #page-content-wrapper {
-        position: relative;
-        margin-right: 0;
-    }
 }
