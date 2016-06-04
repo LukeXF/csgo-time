@@ -17,3 +17,16 @@ $("#show-chat").click(function(e) {
     $("#logo").fadeOut();
     $("#menu-toggle").delay(800).fadeIn();
 });
+
+
+$('#circle').circleProgress({
+    value: 1,
+    size: 350,
+    thickness: 3,
+    animation: {
+        duration: 20000
+    },
+    fill: {
+        gradient: ["#07A4B3", "#00E9FF"]
+    }
+});

@@ -1,0 +1,28 @@
+#betting {
+    margin-top: 30px;
+    .btn {
+        background: none;
+        width: 100%;
+        border: 2px solid #333;
+        border-radius: 10px;
+        padding: 12px;
+        font-weight: bold;
+        font-size: 20px;
+        &.btn-grey-outline {
+            border-color: $grey;
+            color: $grey;
+        }
+        &.btn-red-outline {
+            border-color: $red;
+            color: $red;
+        }
+        &.btn-blue-outline {
+            border-color: $blue;
+            color: $blue;
+        }
+        &.btn-gold-outline {
+            border-color: $gold;
+            color: $gold;
+        }
+    }
+}

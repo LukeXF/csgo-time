@@ -1,0 +1,95 @@
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-right: 1px solid #222;
+    height: 100%;
+    div {
+        text-indent: 20px;
+        line-height: 40px;
+
+        a {
+            display: block;
+            text-decoration: none;
+            color: #999999;
+
+            &:hover {
+                text-decoration: none;
+                color: #fff;
+                background: rgba(255, 255, 255, 0.2);
+            }
+
+            &:active,
+            &:focus {
+                text-decoration: none;
+            }
+        }
+    }
+
+
+
+    .sidebar-brand {
+        min-height: 200px;
+        padding: 20px 0;
+        border-bottom: 1px solid #222;
+
+        a {
+            .csgotime-logo {
+                max-height: 170px;
+                margin: auto;
+                display: block;
+            }
+
+            color: #999999;
+
+            &:hover {
+                color: #fff;
+                background: none;
+            }
+        }
+    }
+
+    .chat-box {
+        position: relative;
+        height: 100%;
+    }
+    .chat {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        border-top: 1px solid #222;
+        padding: 10px;
+    }
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+
+        &.toggled {
+            padding-left: 0;
+            #sidebar-wrapper {
+                width: 0;
+            }
+            #inner-content {
+                position: relative;
+                margin-right: 0;
+            }
+        }
+
+
+        #inner-content {
+            padding: 20px;
+            position: relative;
+        }
+
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+}

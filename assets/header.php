@@ -17,6 +17,7 @@
 
     <script type="text/javascript" src="assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/circle-progress.js"></script>
     <script type="text/javascript" src="assets/js/jquery.timeago.js"></script>
 </head>
 <body>

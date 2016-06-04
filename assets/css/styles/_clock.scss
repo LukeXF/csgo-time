@@ -1,0 +1,29 @@
+#clock {
+    height: 350px;
+
+    .hour-hand {
+        animation: rotate 43200s infinite linear;
+        .hour {
+            background: #000;
+            height: 40%;
+            left: 49%;
+            position: absolute;
+            top: 10%;
+            transform-origin: 50% 100%;
+            width: 2%;
+        }
+
+    }
+
+    * {
+        margin: auto;
+        display: block;
+    }
+
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotateZ(360deg);
+    }
+}

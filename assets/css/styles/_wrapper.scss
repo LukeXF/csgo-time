@@ -1,0 +1,97 @@
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    #inner-content {
+        width: 100%;
+        position: absolute;
+        padding: 15px;
+    }
+
+    &.toggled {
+        padding-left: 250px;
+        #sidebar-wrapper {
+            width: 250px;
+        }
+        #inner-content {
+            position: absolute;
+            margin-right: -250px;
+        }
+
+    }
+}
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #19191E;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    #inner-content {
+        width: 100%;
+        position: absolute;
+        padding: 15px;
+    }
+
+    &.toggled {
+        padding-left: 250px;
+        #sidebar-wrapper {
+            width: 250px;
+        }
+        #inner-content {
+            position: absolute;
+            margin-right: -250px;
+        }
+
+    }
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #19191E;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#show-chat {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #19191E;
+    color: white;
+    border: 1px solid white;
+    display: none;
+    opacity: 0.15;
+    @extend .animate;
+
+    &:hover {
+        opacity: 1
+    }
+}
+
+
