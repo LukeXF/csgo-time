@@ -8,8 +8,6 @@
     border-right: 1px solid #222;
     height: 100%;
     div {
-        text-indent: 20px;
-        line-height: 40px;
 
         a {
             display: block;
@@ -55,6 +53,38 @@
     .chat-box {
         position: relative;
         height: 100%;
+
+        .messages {
+            bottom: 40px;
+            width: 100%;
+            position: absolute;
+
+            .message {
+                border-top: 1px solid #222;
+                color: #999;
+                padding: 5px;
+
+                .player {
+                    background: transparent;
+                    border: none;
+                    color: #999;
+                    opacity: 0.5;
+
+                    @extend .animate;
+                    label {
+                        opacity: 1;
+                    }
+                }
+
+                &:hover {
+                    .player {
+                        opacity: 1;
+                    }
+                }
+
+
+            }
+        }
     }
     .chat {
         position: absolute;

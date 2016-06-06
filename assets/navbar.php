@@ -6,8 +6,40 @@
                     <img class="csgotime-logo" src="assets/img/logo.png">
                 </a>
             </div>
+            <div class="messages">
+            <?php
+                foreach ($chatMessages as $message) {
+
+                    $player = $players[rand(0, count($players) - 1)];
+
+                    if ($player[1] < 10) {
+                        $label = "default";
+                    } else if ($player[1] < 25) {
+                        $label = "primary";
+                    } else if ($player[1] < 50) {
+                        $label = "info";
+                    } else if ($player[1] < 100) {
+                        $label = "warning";
+                    } else if ($player[1] < 250) {
+                        $label = "danger";
+                    } else {
+                        $label = "default";
+                    }
+                    echo '
+                    <div class="message">
+                                            <div class="player">
+                                                <span class="label label-' . $label . '" title="Rank ' . $player[1] . '">' . $player[1] . '</span>
+                                                <span class="name">
+                                                    <img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/' . $player[2] . '_full.jpg">
+                                                ' . $player[0] . '</span>
+                                            </div>
+                    ' . $message . '
+                    </div>';
+                }
+            ?>
+            </div>
             <div class="chat">
-                Login to chat
+                Sign in to chat
             </div>
         </div>
     </div>

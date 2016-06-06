@@ -1,13 +1,21 @@
 #betting {
-    margin-top: 30px;
+    margin-top: 0;
+
+    // give the betting rows more space
+    > div {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
     .btn {
         background: none;
         width: 100%;
         border: 2px solid #333;
-        border-radius: 10px;
-        padding: 12px;
+        border-radius: 0;
+        padding: 5px;
         font-weight: bold;
         font-size: 20px;
+        @extend .animate;
+
         &.btn-grey-outline {
             border-color: $grey;
             color: $grey;
@@ -24,5 +32,60 @@
             border-color: $gold;
             color: $gold;
         }
+
+        &:hover {
+            background-color: #333;
+            color: white;
+
+            &.btn-grey-outline {
+                background: $greyHalf;
+            }
+            &.btn-red-outline {
+                background: $redHalf;
+            }
+            &.btn-blue-outline {
+                background: $blueHalf;
+            }
+            &.btn-gold-outline {
+                background: $goldHalf;
+            }
+        }
+
+        &:focus {
+            outline: none;
+        }
     }
+
+    .place-bets {
+        background-color: $sidebarBG;
+        min-height: 50px;
+        margin-bottom: 30px;
+        padding: 15px 15px;
+        font-weight: 300;
+
+        .sign-in {
+            float: right;
+            border: 1px solid #07A4B3;
+            background-color: #333;
+            border-radius: 5px;
+            color: #999;
+            padding: 7px 10px 6px;
+            margin-right: 5px;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 300;
+            @extend .animate;
+
+            &:hover {
+                color: white;
+                text-decoration: none;
+            }
+        }
+        .message {
+            padding: 6px;
+            float: left;
+            color: #999;
+        }
+    }
+
 }

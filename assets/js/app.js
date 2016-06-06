@@ -21,7 +21,7 @@ $("#show-chat").click(function(e) {
 
 $('#circle').circleProgress({
     value: 1,
-    size: 350,
+    size: 200,
     thickness: 3,
     animation: {
         duration: 20000

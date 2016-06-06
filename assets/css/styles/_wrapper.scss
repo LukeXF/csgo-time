@@ -31,7 +31,7 @@
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background: #19191E;
+    background: $sidebarBG;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -71,7 +71,7 @@
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background: #19191E;
+    background: $sidebarBG;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -82,7 +82,7 @@
     position: fixed;
     bottom: 20px;
     left: 20px;
-    background: #19191E;
+    background: $sidebarBG;
     color: white;
     border: 1px solid white;
     display: none;

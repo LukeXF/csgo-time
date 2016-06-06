@@ -36,9 +36,9 @@ Website
 ---
 
 
-|v0.3 - with chat window enabled ![Logo](assets/img/chat.png)|v0.3 - with chat window hidden ![Logo](assets/img/nochat.png)|
+|v0.4 - with chat window enabled ![Logo](assets/img/chat2.png)|v0.4 - with chat window hidden ![Logo](assets/img/nochat2.png)|
 |---|---|
-
+|v0.3 - with chat window enabled ![Logo](assets/img/chat.png)|v0.3 - with chat window hidden ![Logo](assets/img/nochat.png)|
 
 Logo and Icon
 ---

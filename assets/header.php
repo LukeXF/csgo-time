@@ -1,3 +1,26 @@
+<?php
+
+$betTypes = array("grey" => 2, "red" => 5, "blue" => 10, "gold" => 50);
+
+$players = array(
+    array("LukeXF", 24, "c5/c511b42755441d7543fab3b9f0466d03b348539f"),
+    array("Jacob29", 75, "c5/c511b42755441d7543fab3b9f0466d03b348539f"),
+    array("Xeng0s", 1, "94/94822443af6d010a1e4a15c365231ff72b31290a"),
+    array("98oi", 3, "94/94822443af6d010a1e4a15c365231ff72b31290a"),
+    array("Thankz", 6, "94/94822443af6d010a1e4a15c365231ff72b31290a"),
+    array("You", 1, "d5/d55a2c6c09bcb093ea94036ae05f7365b6520173"),
+    array("Craig29", 2, "d5/d55a2c6c09bcb093ea94036ae05f7365b6520173"),
+    array("Reanda#", 129, "d5/d55a2c6c09bcb093ea94036ae05f7365b6520173")
+);
+
+$chatMessages = array(
+    "Going big on red!",
+    "I'm feeling good about this one",
+    "This is a cool site",
+    "Ugh I can't believe blue won again"
+)
+?>
+
 <html>
 <head>
     <meta charset="UTF-8">
@@ -18,7 +41,7 @@
     <script type="text/javascript" src="assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/js/circle-progress.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.timeago.js"></script>
+    <!--<script type="text/javascript" src="assets/js/jquery.timeago.js"></script>-->
 </head>
 <body>
 

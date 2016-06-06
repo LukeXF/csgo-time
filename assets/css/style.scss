@@ -28,9 +28,65 @@ h1, h2, h3, h4, h5 {
 }
 
 $grey: #555;
+$greyHalf: rgba(85, 85, 85, 0.5);
+
 $red: #C7302D;
+$redHalf: rgba(199, 48, 45, 0.5);
+
 $blue: #2D47C7;
+$blueHalf: rgba(46, 74, 199, 0.5);
+
 $gold: #C7982D;
+$goldHalf: rgba(199, 152, 45, 0.5);
+
+
+$sidebarBG: #19191E;
+
+
+
+.player {
+    padding: 2px 2px;
+    margin-bottom: 2px;
+    background: #222;
+    border: 1px solid #232323;
+    border-radius: 0;
+    color: #999;
+
+    img {
+        width: 20px;
+        height: 20px;
+        border-radius: 50px;
+    }
+
+    .label {
+        opacity: 0.5;
+        min-width: 0;
+        width: auto;
+        display: inline;
+    }
+
+    .amount {
+        float: right;
+        opacity: 0.5;
+        font-weight: bold;
+    }
+
+}
+
+
+.grey {
+    color: $grey;
+}
+.red {
+    color: $red;
+}
+.blue {
+    color: $blue;
+}
+.gold{
+    color: $gold;
+}
+
 
 // handles navigation bar styling
 @import "styles/navbar";

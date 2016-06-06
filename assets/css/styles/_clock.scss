@@ -20,6 +20,22 @@
         display: block;
     }
 
+
+    .bet-history {
+        background-color: $sidebarBG;
+        min-height: 50px;
+        margin: 30px 0;
+        padding: 15px 15px;
+        font-weight: 300;
+        color: #333;
+        text-align: center;
+
+        .history-icons {
+            margin-top: 10px;
+            display: flex;
+        }
+
+    }
 }
 
 @keyframes rotate {
