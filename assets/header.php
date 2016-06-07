@@ -17,8 +17,23 @@ $chatMessages = array(
     "Going big on red!",
     "I'm feeling good about this one",
     "This is a cool site",
-    "Ugh I can't believe blue won again"
-)
+    "Ugh I can't believe blue won again",
+    "So what's up",
+    "That web designer is pretty cool",
+    "The cake is a lie"
+);
+
+if (isset($_GET['user'])) {
+    $loggedIn = true;
+    $type = 'user';
+} else if (isset($_GET['user'])) {
+    $loggedIn = true;
+    $type = 'admin';
+} else {
+    $loggedIn = false;
+}
+// var_dump($loggedIn);
+// var_dump($type);
 ?>
 
 <html>
@@ -26,7 +41,7 @@ $chatMessages = array(
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="CSGO Time, despoit skins, play against the clock and win big.">
+    <meta name="description" content="CSGO Time, deposit skins, play against the clock and win big.">
 
     <title>CSGO TIME</title>
 

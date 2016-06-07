@@ -30,3 +30,35 @@ $('#circle').circleProgress({
         gradient: ["#07A4B3", "#00E9FF"]
     }
 });
+
+$( document ).ready(function() {
+    /*
+    var wrapper = '.message-wrapper';
+    console.log($(wrapper).prop("scrollHeight"));
+
+    var height = 0;
+    $(".messages .message").each(function(i, value){
+        console.log(this);
+        height += parseInt($(this).height());
+    });
+    $(wrapper).animate({scrollTop: height}, 1000);
+
+    */
+
+});
+
+var hash = document.location.hash;
+var prefix = "tab_";
+if (hash) {
+    $('.tab-content ' +hash.replace(prefix,"")).addClass('active in');
+    $(".navbar-right > *").removeClass('active');
+    $(".navbar-right a[href='" + hash.replace(prefix,"") + "']").addClass("active").parents('li').addClass('active');
+} else {
+    $('.tab-content #home').addClass('active in');
+
+}
+
+// Change hash for page-reload
+$('.navbar-right a').on('shown', function (e) {
+    window.location.hash = e.target.hash.replace("#", "#" + prefix);
+});

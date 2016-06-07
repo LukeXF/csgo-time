@@ -6,10 +6,15 @@
                     <img class="csgotime-logo" src="assets/img/logo.png">
                 </a>
             </div>
+            <div id="fade"></div>
+            <div class="message-wrapper">
             <div class="messages">
             <?php
-                foreach ($chatMessages as $message) {
 
+                $i = 0;
+                while ($i < rand(5, 20)) {
+
+                    $message = $chatMessages[rand(0, count($chatMessages) - 1)];
                     $player = $players[rand(0, count($players) - 1)];
 
                     if ($player[1] < 10) {
@@ -27,19 +32,26 @@
                     }
                     echo '
                     <div class="message">
-                                            <div class="player">
-                                                <span class="label label-' . $label . '" title="Rank ' . $player[1] . '">' . $player[1] . '</span>
-                                                <span class="name">
-                                                    <img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/' . $player[2] . '_full.jpg">
-                                                ' . $player[0] . '</span>
-                                            </div>
-                    ' . $message . '
+                        <div class="player">                       
+                            <img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/' . $player[2] . '_full.jpg">
+                            <span class="label label-' . $label . '" title="Rank ' . $player[1] . '">' . $player[1] . '</span>
+                            <span class="name">
+                                ' . $player[0] . '
+                            </span>                            
+                        </div>
+                        ' . $message . '
                     </div>';
+                    $i++;
                 }
             ?>
             </div>
+            </div>
             <div class="chat">
-                Sign in to chat
+                <?php if ($loggedIn) { ?>
+                    Press enter to send
+                <?php } else { ?>
+                    Sign in to chat
+                <?php } ?>
             </div>
         </div>
     </div>
@@ -66,8 +78,18 @@
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
 
-                <li class=''><a class='animate' href='support.php'>Support</a></li>
-                <li class='active end'><a class='animate' href='login.php'>Sign In <i class="fab fab-steam-alt"></i></a></li>
+                <?php if ($loggedIn) { ?>
+                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+                <li role="presentation"><a href="#shop" aria-controls="shop" role="tab" data-toggle="tab">Shop</a></li>
+                <li role="presentation"><a href="#inventory" aria-controls="inventory" role="tab" data-toggle="tab">Inventory</a></li>
+                <li role="presentation"><a href="#help" aria-controls="help" role="tab" data-toggle="tab">Help</a></li>
+                <li role="presentation"><a class='animate' href="#account" aria-controls="account" role="tab" data-toggle="tab">LukeXF
+                        <img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/c5/c511b42755441d7543fab3b9f0466d03b348539f_full.jpg">
+                </li>
+
+                <?php } else { ?>
+                    <li class='active end'><a class='animate' href='?user'>Sign In <i class="fab fab-steam-alt"></i></a></li>
+                <?php } ?>
 
             </ul>
         </div>

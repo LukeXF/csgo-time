@@ -19,9 +19,6 @@
                     color: white !important;
                 }
             }
-            &:last-of-type a {
-                border: 1px solid #07A4B3 !important;
-            }
         }
 
         .active {
@@ -33,6 +30,7 @@
 
         .end {
             a, a:focus {
+                border: 1px solid #07A4B3 !important;
                 background-color: #333 !important;
                 border-radius: 5px;
                 color: #999 !important;
@@ -66,6 +64,15 @@
             .dropdown-divider {
                 margin: 8px;
             }
+        }
+
+        // player avatar
+        img {
+            height: 30px;
+            border-radius: 50px;
+            margin-top: -10px;
+            margin-left: 5px;
+            margin-bottom: -7px;
         }
     }
 
