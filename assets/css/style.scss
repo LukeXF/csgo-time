@@ -3,6 +3,24 @@
     team@elementsoftworks.co.uk
 */
 
+
+$cyan: #07A4B3;
+
+$grey: #555;
+$greyHalf: rgba(85, 85, 85, 0.5);
+
+$red: #C7302D;
+$redHalf: rgba(199, 48, 45, 0.5);
+
+$blue: #2D47C7;
+$blueHalf: rgba(46, 74, 199, 0.5);
+
+$gold: #C7982D;
+$goldHalf: rgba(199, 152, 45, 0.5);
+
+$sidebarBG: #19191E;
+
+
 /* General Site Styling */
 html, body {
     background: #1f1f21;
@@ -27,22 +45,19 @@ h1, h2, h3, h4, h5 {
     -webkit-transition: all .25s ease-in-out;
 }
 
-$grey: #555;
-$greyHalf: rgba(85, 85, 85, 0.5);
+hr {
+    border-color: #333;
+}
 
-$red: #C7302D;
-$redHalf: rgba(199, 48, 45, 0.5);
+a {
+    color: $cyan;
+    @extend .animate;
+    &:hover, &:focus {
+        color: white;
+        text-decoration: none;
+    }
 
-$blue: #2D47C7;
-$blueHalf: rgba(46, 74, 199, 0.5);
-
-$gold: #C7982D;
-$goldHalf: rgba(199, 152, 45, 0.5);
-
-
-$sidebarBG: #19191E;
-
-
+}
 
 .player {
     padding: 2px 2px;

@@ -32,6 +32,22 @@ if (isset($_GET['user'])) {
 } else {
     $loggedIn = false;
 }
+
+function gunTile($title, $image, $price)
+{
+    echo '
+        <div class="col-md-2 col-xs-3 inv-move" style="padding: 0 10px" value="' . $price . '">
+            <a><div class="box gun-tile">
+                <h4>' . $title . '</h4>
+                <img src="' . $image . '">
+                <div class="price-overlay">
+                    <h5><i class="btl bt-money"></i> ' . number_format($price) . '</h5>
+                </div>
+            </div></a>
+        </div>
+    ';
+}
+
 // var_dump($loggedIn);
 // var_dump($type);
 ?>

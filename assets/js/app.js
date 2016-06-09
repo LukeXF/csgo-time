@@ -44,7 +44,26 @@ $( document ).ready(function() {
     $(wrapper).animate({scrollTop: height}, 1000);
 
     */
+    $(".inv-move").click(function() {
 
+        $(this).fadeOut();
+        $('.deposit-info').fadeOut();
+        var img = $('img', this).attr('src');
+        var text = $("h4", this).text() + " - " + $(this).attr('value');
+
+        $('<div class="ready-to-deposit"><div data-toggle="tooltip" ' +
+            'data-placement="bottom"' +
+            'style="background: url(' + img + ') center #222"></div></div>').hide().appendTo('.deposit-line')
+            .attr('data-original-title', text).tooltip('hide')
+            .tooltip('fixTitle');
+
+        var newValue = (parseInt($(this).attr('value')) +  parseInt($('#total-counter').html()));
+        $('#total').html('Deposit for <i class="btl bt-money"></i> ' + newValue);
+        $('#total-counter').html(newValue);
+        $('.deposit-line div:last-of-type').delay(400).fadeIn();
+
+
+    });
 });
 
 var hash = document.location.hash;
@@ -62,3 +81,11 @@ if (hash) {
 $('.navbar-right a').on('shown', function (e) {
     window.location.hash = e.target.hash.replace("#", "#" + prefix);
 });
+
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+});
+
+function moveToDeposit(){
+    $(this).fadeOut();
+}
