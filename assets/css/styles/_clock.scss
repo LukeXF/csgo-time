@@ -43,3 +43,34 @@
         transform: rotateZ(360deg);
     }
 }
+
+
+#clock {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: #333;
+    border-radius: 500px;
+    margin: 0 auto 0 auto;
+    list-style: none;
+    padding: 0;
+    background: url(assets/img/clock.png);
+}
+
+.timeText {
+    position: fixed;
+    top: 0;
+}
+
+#hand {
+    background: url(assets/img/hand.png);
+    z-index: 2;
+    position: absolute;
+    width: 15px;
+    height: 200px;
+    top: 0;
+    left: 92.5px;
+    transition: all 5s ease-in-out;
+    -moz-transition: all 5s ease-in-out;
+    -webkit-transition: all 5s ease-in-out;
+}

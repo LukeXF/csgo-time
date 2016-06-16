@@ -131,7 +131,7 @@
                             <?php gunTile("MAC-10 | Nuclear Garden (Factory New)", "https://csgostash.com/img/skins/s486.png", 200); ?>
                             <?php gunTile("StatTrak™ M4A4 | Howl (Minimal Wear)", "https://csgostash.com/img/skins/s355.png", 92000); ?>
                             <?php gunTile("Negev | Man-o'-war (Minimal Wear)", "https://csgostash.com/img/skins/s563mw.png", 1000); ?>
-                            <?php gunTile("Flip Knife | Doppler (Factory New)", "https://csgostash.com/img/skins/s531fn.png", 12500); ?>
+                            <?php gunTile("Flip Knife | Doppler (Factory New)", "https://csgostash.com/img/skins/s531fn.png", 12500); ?>    
                         </div>
                     </div>
                 </div>
