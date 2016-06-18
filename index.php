@@ -9,21 +9,73 @@
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane fade" id="home">
 
-                    <div class="row" style="max-width: 1200px;">
-                        <div class="col-md-9">
-                            <div class="row" id="betting">
-                                <div class="col-md-12 place-bets">
-                                    <div class="not-signed-in">
+                    <div class="row" id="betting" style="max-width: 1200px;">
 
+                        <div class="col-md-7">
+                            <div id="clock">
+                                <div id="circle"></div>
+                                <li id="hand"></li>
+                                <div class="timeText"></div>
 
-                                        <?php if ($loggedIn) { ?>
-                                            <div class="message">You're in ;) Content coming soon.</div>
-                                        <?php } else { ?>
-                                            <div class="message">Sign in to begin competing.</div>
-                                            <a class='sign-in' href='?user'>Sign In <i class="fab fab-steam-alt"></i></a>
-                                        <?php } ?>
+                                <h1>
+                                    <div class="hour-hand"><div class="hour"></div></div>
+                                </h1>
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 bet-history">
+                            <div class="message">Clock History</div>
+                            <div class="history-icons">
+                                <i class="btl bt-clock bt-2x red"></i>
+                                <i class="btl bt-clock bt-2x blue"></i>
+                                <i class="btl bt-clock bt-2x grey"></i>
+                                <i class="btl bt-clock bt-2x grey" style="opacity:0.8"></i>
+                                <i class="btl bt-clock bt-2x red" style="opacity:0.7"></i>
+                                <i class="btl bt-clock bt-2x gold" style="opacity:0.6"></i>
+                                <i class="btl bt-clock bt-2x grey" style="opacity:0.5"></i>
+                                <i class="btl bt-clock bt-2x red" style="opacity:0.4"></i>
+                                <i class="btl bt-clock bt-2x blue" style="opacity:0.3"></i>
+                                <i class="btl bt-clock bt-2x blue" style="opacity:0.2"></i>
+                                <i class="btl bt-clock bt-2x grey" style="opacity:0.1"></i>
+                            </div>
+
+                        </div>
+                        <div class="col-md-5 place-bets">
+
+                            <?php if ($loggedIn) { ?>
+                            <div class="signed-in">
+                                <div class="message">
+                                    <div class="row betting-options">
+                                        <div class="col-md-12">
+                                            <button class="btn btn-default">Clear</button>
+                                            <button class="btn btn-default">Last</button>
+                                            <button class="btn btn-default">10</button>
+                                            <button class="btn btn-default">100</button>
+                                            <button class="btn btn-default">100</button>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <button class="btn btn-default">1000</button>
+                                            <button class="btn btn-default">10000</button>
+                                            <button class="btn btn-default">1/2</button>
+                                            <button class="btn btn-default">x2</button>
+                                            <button class="btn btn-default">Max</button>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <button class="btn btn-default betting-balance">15,000 <i class="btl bt-money"></i></button>
+                                            <input type="email" class="form-control" placeholder="0">
+                                        </div>
                                     </div>
                                 </div>
+                            <?php } else { ?>
+                            <div class="not-signed-in">
+                                <div class="message">Sign in to begin competing.</div>
+                                <a class='sign-in' href='?user'>Sign In <i class="fab fab-steam-alt"></i></a>
+                            <?php } ?>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="row">
                                 <?php
 
                                     foreach ($betTypes as $colour => $amount) {
@@ -70,33 +122,6 @@
                                     }
                                 ?>
                             </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div id="clock">
-                                <div id="circle"></div>
-                                <h1>
-                                    <div class="hour-hand"><div class="hour"></div></div>
-                                </h1>
-
-                                <div class="col-md-12 bet-history">
-                                    <div class="message">Clock History</div>
-                                    <div class="history-icons">
-                                        <i class="btl bt-clock red"></i>
-                                        <i class="btl bt-clock blue"></i>
-                                        <i class="btl bt-clock grey"></i>
-                                        <i class="btl bt-clock grey" style="opacity:0.8"></i>
-                                        <i class="btl bt-clock red" style="opacity:0.7"></i>
-                                        <i class="btl bt-clock gold" style="opacity:0.6"></i>
-                                        <i class="btl bt-clock grey" style="opacity:0.5"></i>
-                                        <i class="btl bt-clock red" style="opacity:0.4"></i>
-                                        <i class="btl bt-clock blue" style="opacity:0.3"></i>
-                                        <i class="btl bt-clock blue" style="opacity:0.2"></i>
-                                        <i class="btl bt-clock grey" style="opacity:0.1"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-
                         </div>
                     </div>
 

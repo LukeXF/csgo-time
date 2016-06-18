@@ -4,7 +4,7 @@ $("#menu-toggle").click(function(e) {
     $(this).fadeOut();
     setTimeout(function() {
         $("#wrapper").toggleClass("toggled");
-        $("#show-chat").fadeIn();
+        $("#show-chat").delay(1100).fadeIn();
     }, 500);
     $("#logo").delay(1100).fadeIn();
 });
@@ -21,11 +21,12 @@ $("#show-chat").click(function(e) {
 
 $('#circle').circleProgress({
     value: 1,
-    size: 200,
-    thickness: 3,
+    size: 350,
+    thickness: 7,
     animation: {
         duration: 20000
     },
+    startAngle: -Math.PI / 2,
     fill: {
         gradient: ["#07A4B3", "#00E9FF"]
     }
@@ -64,6 +65,57 @@ $( document ).ready(function() {
 
 
     });
+
+
+    spinClock(rand(0, 360), 1);
+
+    function spinClock(ran, i) {
+        var deg = (((360 * 20.5) * i) + ran);
+
+
+        setTimeout(function () {
+
+
+            $('#circle').circleProgress({
+                value: 0,
+                size: 350,
+                thickness: 7,
+                animation: {
+                    duration: 20000
+                },
+                startAngle: -Math.PI / 2,
+                fill: {
+                    gradient: ["#07A4B3", "#00E9FF"]
+                }
+            });
+
+
+            setTimeout(function () {
+                $('.timeText').hide().html("Landed at " + ran + " Degrees.").fadeIn('slow');
+
+                $('#circle').circleProgress({
+                    value: 1,
+                    size: 350,
+                    thickness: 7,
+                    animation: {
+                        duration: 20000
+                    },
+                    startAngle: -Math.PI / 2,
+                    fill: {
+                        gradient: ["#07A4B3", "#00E9FF"]
+                    }
+                });
+
+                spinClock(rand(0, 360), i + 1);
+
+            }, 5000);
+            $("#hand").css({"transform": "rotate(" + deg + "deg)"});
+        }, 20000);
+    }
+
+    function rand(min, max) {
+        return Math.round(Math.random() * (max - min) + min);
+    }
 });
 
 var hash = document.location.hash;

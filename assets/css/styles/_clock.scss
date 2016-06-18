@@ -1,5 +1,23 @@
+@keyframes rotate {
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+
 #clock {
+    position: relative;
+    width: 350px;
     height: 350px;
+    background: #333;
+    border-radius: 500px;
+    margin: 0 auto 0 auto;
+    list-style: none;
+    padding: 0;
+    background: url("../img/clock.png");
+    background-size: cover;
+    margin-bottom: 25px;
+
 
     .hour-hand {
         animation: rotate 43200s infinite linear;
@@ -16,45 +34,14 @@
     }
 
     * {
-        margin: auto;
-        display: block;
-    }
-
-
-    .bet-history {
-        background-color: $sidebarBG;
-        min-height: 50px;
-        margin: 30px 0;
-        padding: 15px 15px;
-        font-weight: 300;
-        color: #999;
-        text-align: center;
-
-        .history-icons {
-            margin-top: 10px;
-            display: flex;
-        }
-
+        transition: all 5s ease-in-out;
+        -moz-transition: all 5s ease-in-out;
+        -webkit-transition: all 5s ease-in-out;
     }
 }
 
-@keyframes rotate {
-    100% {
-        transform: rotateZ(360deg);
-    }
-}
-
-
-#clock {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    background: #333;
-    border-radius: 500px;
-    margin: 0 auto 0 auto;
-    list-style: none;
-    padding: 0;
-    background: url(assets/img/clock.png);
+.lol {
+    color: blue;
 }
 
 .timeText {
@@ -63,13 +50,13 @@
 }
 
 #hand {
-    background: url(assets/img/hand.png);
+    background: url("../img/hand.png");
     z-index: 2;
     position: absolute;
     width: 15px;
-    height: 200px;
+    height: 350px;
     top: 0;
-    left: 92.5px;
+    left: 168px;
     transition: all 5s ease-in-out;
     -moz-transition: all 5s ease-in-out;
     -webkit-transition: all 5s ease-in-out;

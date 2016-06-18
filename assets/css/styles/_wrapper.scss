@@ -80,13 +80,14 @@
 
 #show-chat {
     position: fixed;
-    bottom: 20px;
+    top: 80px;
     left: 20px;
     background: $sidebarBG;
     color: white;
     border: 1px solid white;
     display: none;
     opacity: 0.15;
+    z-index: 9999;
     @extend .animate;
 
     &:hover {

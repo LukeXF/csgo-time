@@ -85,7 +85,66 @@
             padding: 6px;
             float: left;
             color: #999;
+
+            .betting-options {
+                padding-left: 15px;
+                padding-right: 15px;
+                > div {
+                    display: flex;
+                    padding-left: 5px;
+                    padding-right: 5px;
+                }
+                button {
+                    font-size: 12px;
+                    color: #555;
+                    margin: 2px;
+                    @extend .animate;
+                    &:hover {
+                        color: white;
+                    }
+                    &.betting-balance {
+                        color: #555;
+                        cursor: default;
+                        &:hover {
+                            background: transparent;
+                        }
+                    }
+                }
+                input {
+                    background: none;
+                    border: 2px solid $cyan;
+                    width: 200%;
+                    color: #999;
+                    border-radius: 0;
+                    margin: 2px;
+                    font-weight: bold;
+                    font-size: 12px;
+                    height: inherit;
+                    line-height: 1.4;
+                    @extend .animate;
+                }
+            }
         }
+    }
+    .signed-in .message {
+        float: none;
+    }
+
+
+    .bet-history {
+        background-color: $sidebarBG;
+        min-height: 50px;
+        margin: 30px 0;
+        padding: 15px 15px;
+        font-weight: 300;
+        color: #999;
+        text-align: center;
+
+        .history-icons {
+            margin-top: 10px;
+            display: flex;
+        }
+
     }
 
 }
