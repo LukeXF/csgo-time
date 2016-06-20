@@ -34,7 +34,7 @@
                     <div class="message">
                         <div class="player">                       
                             <img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/' . $player[2] . '_full.jpg">
-                            <span class="label label-' . $label . '" title="Rank ' . $player[1] . '">' . $player[1] . '</span>
+                            <!--<span class="label label-' . $label . '" title="Rank ' . $player[1] . '">' . $player[1] . '</span>-->
                             <span class="name">
                                 ' . $player[0] . '
                             </span>                            

@@ -36,11 +36,23 @@ Website
 ---
 
 
-|v0.6 - account page ![Logo](assets/img/account.png)|v0.6 - inventory page ![Logo](assets/img/inv.png)|v0.5 - with chat ![Logo](assets/img/chat3.png)|v0.5 - without chat ![Logo](assets/img/nochat3.png)|
+|v0.7 - with chat ![Logo](assets/img/chat4.png)|v0.7 - without chat ![Logo](assets/img/nochat4.png)|v0.7 - account page ![Logo](assets/img/account2.png)|v0.7 - inventory page ![Logo](assets/img/inv.png)|
 |---|---|---|---|
+|v0.6 - with chat ![Logo](assets/img/chat3.png)|v0.6 - without chat ![Logo](assets/img/nochat3.png)|v0.6 - account page ![Logo](assets/img/account.png)|v0.6 - inventory page ![Logo](assets/img/inv.png)|
 |v0.5 - with chat window enabled (logged in) ![Logo](assets/img/chat3.png)|v0.5 - with chat window hidden (logged out) ![Logo](assets/img/nochat3.png)| | |
 |v0.4 - with chat window enabled ![Logo](assets/img/chat2.png)|v0.4 - with chat window hidden ![Logo](assets/img/nochat2.png)| | |
 |v0.3 - with chat window enabled ![Logo](assets/img/chat.png)|v0.3 - with chat window hidden ![Logo](assets/img/nochat.png)| | |
+
+
+Twitter Assets
+--------------
+
+|Logo v2 ![Logo](assets/img/twitter-logo2.png)|Background v2 ![Logo](assets/img/twitter-background2.png)|Giveaway v1 ![Logo](assets/img/twitter-giveaway.png)|
+|---|---|---|---|
+|Logo v1 ![Logo](assets/img/twitter-logo.png)|Background v1 ![Logo](assets/img/twitter-background.png)|![space](http://imgur.com/m52mSr5.png)||
+
+
+
 
 Logo and Icon
 ---

@@ -1,3 +1,4 @@
+// when chat hide is clicked
 $("#menu-toggle").click(function(e) {
     e.preventDefault();
 
@@ -8,6 +9,8 @@ $("#menu-toggle").click(function(e) {
     }, 500);
     $("#logo").delay(1100).fadeIn();
 });
+
+// when chat show is clicked
 $("#show-chat").click(function(e) {
     e.preventDefault();
     setTimeout(function() {
@@ -18,33 +21,8 @@ $("#show-chat").click(function(e) {
     $("#menu-toggle").delay(800).fadeIn();
 });
 
-
-$('#circle').circleProgress({
-    value: 1,
-    size: 350,
-    thickness: 7,
-    animation: {
-        duration: 20000
-    },
-    startAngle: -Math.PI / 2,
-    fill: {
-        gradient: ["#07A4B3", "#00E9FF"]
-    }
-});
-
 $( document ).ready(function() {
-    /*
-    var wrapper = '.message-wrapper';
-    console.log($(wrapper).prop("scrollHeight"));
-
-    var height = 0;
-    $(".messages .message").each(function(i, value){
-        console.log(this);
-        height += parseInt($(this).height());
-    });
-    $(wrapper).animate({scrollTop: height}, 1000);
-
-    */
+    
     $(".inv-move").click(function() {
 
         $(this).fadeOut();
@@ -66,58 +44,14 @@ $( document ).ready(function() {
 
     });
 
-
-    spinClock(rand(0, 360), 1);
-
-    function spinClock(ran, i) {
-        var deg = (((360 * 20.5) * i) + ran);
-
-
-        setTimeout(function () {
-
-
-            $('#circle').circleProgress({
-                value: 0,
-                size: 350,
-                thickness: 7,
-                animation: {
-                    duration: 20000
-                },
-                startAngle: -Math.PI / 2,
-                fill: {
-                    gradient: ["#07A4B3", "#00E9FF"]
-                }
-            });
-
-
-            setTimeout(function () {
-                $('.timeText').hide().html("Landed at " + ran + " Degrees.").fadeIn('slow');
-
-                $('#circle').circleProgress({
-                    value: 1,
-                    size: 350,
-                    thickness: 7,
-                    animation: {
-                        duration: 20000
-                    },
-                    startAngle: -Math.PI / 2,
-                    fill: {
-                        gradient: ["#07A4B3", "#00E9FF"]
-                    }
-                });
-
-                spinClock(rand(0, 360), i + 1);
-
-            }, 5000);
-            $("#hand").css({"transform": "rotate(" + deg + "deg)"});
-        }, 20000);
-    }
-
-    function rand(min, max) {
-        return Math.round(Math.random() * (max - min) + min);
-    }
 });
 
+
+function moveToDeposit(){
+    $(this).fadeOut();
+}
+
+// wrapper functionality
 var hash = document.location.hash;
 var prefix = "tab_";
 if (hash) {
@@ -138,6 +72,7 @@ $(function () {
     $('[data-toggle="tooltip"]').tooltip()
 });
 
-function moveToDeposit(){
-    $(this).fadeOut();
+
+function rand(min, max) {
+    return Math.round(Math.random() * (max - min) + min);
 }
